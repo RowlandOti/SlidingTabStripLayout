@@ -1,0 +1,20 @@
+<resources>
+
+    <declare-styleable name="TabLayout" parent="TabLayout">
+
+        <!-- Reference to a style for the TabLayout -->
+        <attr name="tabIsSelectedTextBold" format="boolean" />
+        <attr name="tabSelectedTextAppearance" format="reference"/>
+        <attr name="tabUnderlineColor" format="color"/>
+        <attr name="tabUnderlineHeight" format="dimension"/>
+
+    </declare-styleable>
+
+    <declare-styleable name="TextAppearance" parent="TextAppearance">
+        <attr name="shadowRadius" format="dimension"/>
+        <attr name="shadowDx" format="dimension"/>
+        <attr name="shadowDy" format="dimension"/>
+        <attr name="shadowColor" format="color"/>
+    </declare-styleable>
+
+</resources>

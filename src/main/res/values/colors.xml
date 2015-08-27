@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="tab_divider">#B6B6B6</color>
+    <color name="tab_underline">#B6B6B6</color>
+    <color name="tab_indicator">#FF9800</color>
+</resources>
