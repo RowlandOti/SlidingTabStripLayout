@@ -1,9 +1,5 @@
 <resources>
-
-    
-
     <!-- TabLayout styles -->
-
 
     <!-- TabLayout styles -->
     <style name="CustomTabLayout" parent="Widget.Design.TabLayout">

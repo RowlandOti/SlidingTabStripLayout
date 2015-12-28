@@ -13,7 +13,7 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
-import android.support.v7.internal.widget.TintManager;
+import android.support.v7.widget.TintManager;
 import android.support.v7.widget.AppCompatTextView;
 import android.text.TextUtils;
 import android.text.TextUtils.TruncateAt;
@@ -40,6 +40,9 @@ import java.util.Iterator;
 
 /**
  *
+ * This class is a custom design of the same class found in the android.support.design library. I decided to use it
+ * under the same package name for ease of implementation and reuse protected classes.
+ *
  * To be used with ViewPager to provide a tab indicator component which give constant feedback as
  * to the user's scroll progress.
  * <p>
@@ -54,6 +57,7 @@ import java.util.Iterator;
  * The views used as tabs can be customized by calling {@link #Tab.setCustomView(View)} Color(android.view.View)},
  * providing the layout ID of your custom layout.
  *
+ * Created by Google -Android on 7/5/2015.
  * Created by Rowland on 7/5/2015.
  */
 public class SlidingTabStripLayout extends HorizontalScrollView {
@@ -145,7 +149,7 @@ public class SlidingTabStripLayout extends HorizontalScrollView {
         a.recycle();
         this.applyModeAndGravity();
     }
-
+    // Scroll to the position given
     public void setScrollPosition(int position, float positionOffset, boolean updateSelectedText)
     {
         if(!isAnimationRunning(this.getAnimation())) {
