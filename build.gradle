@@ -1,5 +1,29 @@
 apply plugin: 'com.android.library'
 
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'SlidingTabStripLayout'
+ 
+    publishedGroupId = 'com.inthecheesefactory.thecheeselibrary'
+    libraryName = 'SlidingTabStripLayout'
+    artifact = 'SlidingTabStripLayout'
+ 
+    libraryDescription = 'A custom of the one found in the design library.'
+ 
+    siteUrl = 'https://github.com/RowlandOti/SlidingTabStripLayout'
+    gitUrl = 'https://github.com/RowlandOti/SlidingTabStripLayout.git'
+ 
+    libraryVersion = '1.0.2'
+ 
+    developerId = 'rowlandoti'
+    developerName = 'Oti Rowland'
+    developerEmail = 'rowlandmtetezi@gmail.com'
+ 
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
 android {
     compileSdkVersion Integer.parseInt(project.ANDROID_BUILD_TARGET_SDK_VERSION)
     buildToolsVersion project.ANDROID_BUILD_TOOLS_VERSION
@@ -19,8 +43,11 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:23.1.1'
-    compile 'com.android.support:support-v4:23.1.1'
-    compile 'com.android.support:design:23.1.1'
+    compile designDependencies.supportAppCompatV4
+    compile designDependencies.supportAppCompatV7
+    compile designDependencies.supportDesign
 }
+
+// Place it at the end of the file
+//apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
