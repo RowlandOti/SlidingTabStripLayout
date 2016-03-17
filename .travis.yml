@@ -28,5 +28,8 @@ before_script:
   - ./.ci/wait_for_emulator.sh
   - adb shell input keyevent 82 &
 
+  before_install:
+ - chmod +x gradlew
+
 script:
   - ./gradlew build connectedCheck
