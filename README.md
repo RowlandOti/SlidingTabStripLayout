@@ -1,3 +1,6 @@
+### Status
+[![Build Status](https://travis-ci.org/RowlandOti/SlidingTabStripLayout.svg?branch=master)](https://travis-ci.org/RowlandOti/SlidingTabStripLayout)
+
 # SlidingTabStripLayout
 Custom SlidingTabStripLayout of the one found in Android Design support library . It has additional features listed below
 * SlidingTabStripLayout underline color
