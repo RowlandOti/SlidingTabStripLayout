@@ -4,7 +4,7 @@ ext {
     bintrayRepo = 'maven'
     bintrayName = 'SlidingTabStripLayout'
  
-    publishedGroupId = 'com.inthecheesefactory.thecheeselibrary'
+    publishedGroupId = 'android.support.design.widget'
     libraryName = 'SlidingTabStripLayout'
     artifact = 'SlidingTabStripLayout'
  
