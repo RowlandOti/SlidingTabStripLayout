@@ -6,6 +6,27 @@ Custom SlidingTabStripLayout of the one found in Android Design support library 
 * SlidingTabStripLayout underline color
 * Highlight of selected Tab with different shade of color and size of text(Different Text Appearance)
 
+## Download
+Download [the latest JAR][1] or grab via Maven:
+```xml
+<dependency>
+  <groupId>com.rowland.slidingtabstriplayout</groupId>
+  <artifactId>slidingTabStripLayout</artifactId>
+  <version>1.0.0-beta-1</version>
+  <type>pom</type>
+</dependency>
+```
+or Gradle:
+```groovy
+repositories {
+  jcenter()
+}
+
+dependencies {
+  compile 'com.rowland.slidingtabstriplayout:slidingTabStripLayout:1.0.0-beta-1'
+}
+```
+
 ## Usage
 Usage is very similar to the one in the support library . Since I retained the same package names . You can use it like below
 
