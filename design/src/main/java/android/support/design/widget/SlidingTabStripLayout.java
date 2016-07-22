@@ -14,7 +14,6 @@ import android.support.v4.view.ViewCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.support.v7.widget.AppCompatTextView;
-import android.support.v7.widget.TintManager;
 import android.text.TextUtils;
 import android.text.TextUtils.TruncateAt;
 import android.util.AttributeSet;
@@ -831,7 +830,8 @@ public class SlidingTabStripLayout extends HorizontalScrollView {
             super(context);
             this.mTab = tab;
             if (SlidingTabStripLayout.this.mTabBackgroundResId != 0) {
-                this.setBackgroundDrawable(TintManager.getDrawable(context, SlidingTabStripLayout.this.mTabBackgroundResId));
+                //this.setBackgroundDrawable(TintManager.getDrawable(context, SlidingTabStripLayout.this.mTabBackgroundResId));
+                this.setBackgroundResource(SlidingTabStripLayout.this.mTabBackgroundResId);
             }
 
             ViewCompat.setPaddingRelative(this, SlidingTabStripLayout.this.mTabPaddingStart, SlidingTabStripLayout.this.mTabPaddingTop, SlidingTabStripLayout.this.mTabPaddingEnd, SlidingTabStripLayout.this.mTabPaddingBottom);
@@ -1057,7 +1057,8 @@ public class SlidingTabStripLayout extends HorizontalScrollView {
         }
 
         public SlidingTabStripLayout.Tab setIcon(int resId) {
-            return this.setIcon(TintManager.getDrawable(this.mParent.getContext(), resId));
+            //return this.setIcon(TintManager.getDrawable(this.mParent.getContext(), resId));
+            return null;
         }
 
         public SlidingTabStripLayout.Tab setText(CharSequence text) {
