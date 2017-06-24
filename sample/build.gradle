@@ -27,4 +27,5 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:25.1.1'
     compile project(path: ':design')
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
 }

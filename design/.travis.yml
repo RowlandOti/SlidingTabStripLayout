@@ -42,8 +42,8 @@ android:
     - extra-google-google_play_services
     - extra-android-m2repository
     - extra-google-m2repository
-    - build-tools-23.0.2
-    - android-23
+    - build-tools-25.0.2
+    - android-25
 
 before_install:
   - chmod +x gradlew
