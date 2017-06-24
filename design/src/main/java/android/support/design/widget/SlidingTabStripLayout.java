@@ -9,12 +9,12 @@ import android.graphics.Paint;
 import android.graphics.drawable.Drawable;
 import android.support.design.widget.ValueAnimatorCompat.AnimatorListenerAdapter;
 import android.support.design.widget.ValueAnimatorCompat.AnimatorUpdateListener;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.support.v7.widget.AppCompatTextView;
-import android.support.v7.widget.TintManager;
 import android.text.TextUtils;
 import android.text.TextUtils.TruncateAt;
 import android.util.AttributeSet;
@@ -146,7 +146,6 @@ public class SlidingTabStripLayout extends HorizontalScrollView {
                 if (updateSelectedText) {
                     this.setSelectedTabView(Math.round((float) position + positionOffset));
                 }
-
             }
         }
     }
@@ -441,7 +440,7 @@ public class SlidingTabStripLayout extends HorizontalScrollView {
                     animator.setInterpolator(AnimationUtils.FAST_OUT_SLOW_IN_INTERPOLATOR);
                     animator.setDuration(300);
                     animator.setIntValues(startScrollX, targetScrollX);
-                    animator.setUpdateListener(new AnimatorUpdateListener() {
+                    animator.addUpdateListener(new AnimatorUpdateListener() {
                         public void onAnimationUpdate(ValueAnimatorCompat animator) {
                             SlidingTabStripLayout.this.scrollTo(animator.getAnimatedIntValue(), 0);
                         }
@@ -787,13 +786,13 @@ public class SlidingTabStripLayout extends HorizontalScrollView {
                 animator1.setInterpolator(AnimationUtils.FAST_OUT_SLOW_IN_INTERPOLATOR);
                 animator1.setDuration(duration);
                 animator1.setFloatValues(0.0F, 1.0F);
-                animator1.setUpdateListener(new AnimatorUpdateListener() {
+                animator1.addUpdateListener(new AnimatorUpdateListener() {
                     public void onAnimationUpdate(ValueAnimatorCompat animator) {
                         float fraction = animator.getAnimatedFraction();
                         SlidingTabStrip.this.setIndicatorPosition(AnimationUtils.lerp(startLeft, targetLeft, fraction), AnimationUtils.lerp(startRight, targetRight, fraction));
                     }
                 });
-                animator1.setListener(new AnimatorListenerAdapter() {
+                animator1.addListener(new AnimatorListenerAdapter() {
                     public void onAnimationEnd(ValueAnimatorCompat animator) {
                         SlidingTabStrip.this.mSelectedPosition = position;
                         SlidingTabStrip.this.mSelectionOffset = 0.0F;
@@ -831,7 +830,7 @@ public class SlidingTabStripLayout extends HorizontalScrollView {
             super(context);
             this.mTab = tab;
             if (SlidingTabStripLayout.this.mTabBackgroundResId != 0) {
-                this.setBackgroundDrawable(TintManager.getDrawable(context, SlidingTabStripLayout.this.mTabBackgroundResId));
+                this.setBackgroundDrawable(ContextCompat.getDrawable(context, SlidingTabStripLayout.this.mTabBackgroundResId));
             }
 
             ViewCompat.setPaddingRelative(this, SlidingTabStripLayout.this.mTabPaddingStart, SlidingTabStripLayout.this.mTabPaddingTop, SlidingTabStripLayout.this.mTabPaddingEnd, SlidingTabStripLayout.this.mTabPaddingBottom);
@@ -1057,7 +1056,7 @@ public class SlidingTabStripLayout extends HorizontalScrollView {
         }
 
         public SlidingTabStripLayout.Tab setIcon(int resId) {
-            return this.setIcon(TintManager.getDrawable(this.mParent.getContext(), resId));
+            return this.setIcon(ContextCompat.getDrawable(this.mParent.getContext(), resId));
         }
 
         public SlidingTabStripLayout.Tab setText(CharSequence text) {
