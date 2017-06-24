@@ -19,8 +19,8 @@ android:
   - extra-google-google_play_services
   - extra-android-m2repository
   - extra-google-m2repository
-  - build-tools-23.0.2
-  - android-23
+  - build-tools-25.0.2
+  - android-25
 deploy:
   provider: releases
   # The api-key is encrypted like described here: http://docs.travis-ci.com/user/encryption-keys/  (only travis can decrypt the key)
