@@ -1,5 +1,15 @@
 apply plugin: 'com.android.application'
 
+buildscript {
+    repositories {
+        jcenter()
+        // You need to add the following repository to download the new google plugins.
+        maven {
+            url 'https://maven.google.com'
+        }
+    }
+}
+
 android {
     compileSdkVersion Integer.parseInt(project.ANDROID_BUILD_TARGET_SDK_VERSION)
     buildToolsVersion project.ANDROID_BUILD_TOOLS_VERSION
@@ -23,9 +33,9 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:25.1.1'
-    compile project(path: ':design')
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.android.support:appcompat-v7:25.1.1'
+    implementation project(path: ':design')
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
 }
