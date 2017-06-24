@@ -27,7 +27,7 @@ deploy:
   api_key:
     secure: pGCEve1sTbuVDFw5YLunvYedDs6CPUnNaQPfE4n/ihj14xOD1LeA+9QF4BXWHVNlDLSC39auUrG6qiCsOBwN/M+jK4TFT1FuyjkHokrMayo/nEmDGwcQ3k23L33wY27p6JizkGPH2T9Lw9KyLVSjk4FC3CRMXQIH/HPgJW+VKKCz8S7DDv6JaefMGTXdXoeeI0F/feMCirgtRRHlI53uq03Cwt6gskw8y0pbUrE8lSG3qXsBodVcO/ZbgFFJo9VhZvKsklYx6Azk/hCVWrePpIqcHC3TOSmDob0i2QcZLXHjWGYiisuiPVQqbjPxIucW6+GSdD3Adhb6Lras1TH2jn/GV2/NiOvq3FT1byNbaI2jxqK7TTCscdPyVr10R1QhvIk72Y7QvaH1Kb6T84W0w5b9cE6wDtw00mzjBwRMNSn27pvFXV3BVxWsSN5cG15GZAlKzBnb0JQyVqo++pEUZyWCgtDzYuCUPy9NiIBnWhuoDwriDcAHX5n5W/rudcrfsAdJIJQZO7Lcq+SsV8a8esE6UCuVSpI+Bp/lPmjwLdmjaXFFiIUwLHWGF8Z5MYqnpJdLBTVoGjlo/fvgk4ONXS+82Eb9VRDtRamGpHq3Z16X5n2qRpPI2BRbLKMDL8HosRjkgQKmBlV0ocyTM+IB6xkZuzxMIUFC9/ZEGvOD1lU=
   # Which file(s) to upload
-  file: sample/build/outputs/apk/sample-debug.apk
+  file: sample/build/outputs/apk/debug/sample-debug.apk
   # do not delete the files we're trying to upload
   skip_cleanup: true
   # only deploy if
