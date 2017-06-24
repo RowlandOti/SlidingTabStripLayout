@@ -5,6 +5,10 @@ apply from: '../.buildsystem/.bintray/bintray.gradle'
 buildscript {
     repositories {
         jcenter()
+        // You need to add the following repository to download the new google plugins.
+        maven {
+            url 'https://maven.google.com'
+        }
     }
     dependencies {
         classpath 'com.novoda:bintray-release:0.5.0'
