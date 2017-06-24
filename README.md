@@ -12,7 +12,7 @@ Download [the latest JAR][1] or grab via Maven:
 <dependency>
   <groupId>com.rowland.slidingtabstriplayout</groupId>
   <artifactId>slidingTabStripLayout</artifactId>
-  <version>1.0.0-beta-1</version>
+  <version>1.0.0-beta-3</version>
   <type>pom</type>
 </dependency>
 ```
@@ -23,7 +23,7 @@ repositories {
 }
 
 dependencies {
-  compile 'com.rowland.slidingtabstriplayout:slidingTabStripLayout:1.0.0-beta-1'
+  compile 'com.rowland.slidingtabstriplayout:slidingTabStripLayout:1.0.0-beta-3'
 }
 ```
 
